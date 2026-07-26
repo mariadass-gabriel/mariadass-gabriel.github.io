@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Mariadass — Portfolio</title>
+<meta name="description" content="Gabriel Mariadass — recherche en machine learning probabiliste et modélisation stochastique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="#top" class="nav-mark">G.M.</a>
+  <div class="nav-links">
+    <a href="#work">Travaux</a>
+    <a href="#about">Parcours</a>
+    <a href="#skills">Compétences</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">FIG. 01 — DISTRIBUTION DE QUEUE LOURDE</p>
+      <h1>Gabriel Mariadass</h1>
+      <p class="hero-sub">
+        Je m'intéresse à ce qui échappe à la moyenne : queues lourdes, incertitude,
+        et modèles qui restent honnêtes quand les données se raréfient.
+        Formation ENPC / MVA, actuellement en recherche sur l'inférence variationnelle
+        possibiliste à NTU Singapour.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">Voir les travaux</a>
+        <a href="https://github.com/mariadass-gabriel" class="btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <svg id="plot" viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nuage de points log-log avec droite de régression, illustrant une loi de puissance">
+        <!-- axes -->
+        <line x1="60" y1="360" x2="440" y2="360" class="axis"/>
+        <line x1="60" y1="360" x2="60" y2="30" class="axis"/>
+        <!-- axis labels -->
+        <text x="250" y="398" class="axis-label" text-anchor="middle">log |rendement|</text>
+        <text x="24" y="195" class="axis-label" text-anchor="middle" transform="rotate(-90 24 195)">log P(X &gt; x)</text>
+        <!-- tick marks -->
+        <g class="ticks"></g>
+        <!-- scatter points, injected by script.js -->
+        <g id="scatter"></g>
+        <!-- regression line, drawn by script.js -->
+        <path id="regline" d="" />
+      </svg>
+      <p class="fig-caption">S&amp;P500, CAC40 — exposant de queue estimé par régression log-log</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <p class="eyebrow">FIG. 02 — TRAJECTOIRE</p>
+    <div class="about-grid">
+      <p class="about-text">
+        Parcours classique en maths appliquées — classes préparatoires, École des Ponts (ENPC),
+        puis Master MVA (ENS Paris-Saclay) — avec un fil conducteur : comprendre les modèles
+        sous incertitude, quand la théorie standard (gaussienne, variance finie) ne suffit plus.
+        Actuellement en stage de recherche à NTU Singapour sur l'inférence variationnelle
+        possibiliste, sous la direction de Jérémie Houssineau.
+      </p>
+      <ol class="timeline">
+        <li><span class="t-year">—</span><span class="t-label">Classes préparatoires</span></li>
+        <li><span class="t-year">—</span><span class="t-label">École des Ponts ParisTech</span></li>
+        <li><span class="t-year">—</span><span class="t-label">Master MVA, ENS Paris-Saclay</span></li>
+        <li><span class="t-year">2026</span><span class="t-label">Recherche, NTU Singapour</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="work">
+    <p class="eyebrow">FIG. 03 — TRAVAUX</p>
+    <h2 class="section-title">Projets académiques</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Are Minimal RNNs Enough?</h3>
+        <span class="card-tag">Deep Learning · MVA</span>
+      </div>
+      <p class="card-desc">
+        Reproduction et extension du papier <em>"Were RNNs All We Needed?"</em> : les architectures
+        parallélisables minGRU / minLSTM, testées via des ablations de profondeur et des
+        expériences de généralisation en longueur de séquence face aux baselines classiques.
+        Réalisé avec Yani Hammache.
+      </p>
+      <div class="card-meta">
+        <span class="chip">PyTorch</span>
+        <span class="chip">Sequence Modeling</span>
+        <span class="chip">Parallel Scan</span>
+      </div>
+      <a href="https://github.com/mariadass-gabriel/minRNNs" class="card-link" target="_blank" rel="noopener">Voir le code ↗</a>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Variational Approximations of Gibbs Posteriors</h3>
+        <span class="card-tag">Bayesian ML · MVA</span>
+      </div>
+      <p class="card-desc">
+        Reproduction et extension de l'analyse PAC-Bayésienne d'Alquier, Ridgway &amp; Chopin sur les
+        approximations variationnelles du posterior de Gibbs — bornes PAC avec prior appris,
+        validées sur des jeux de données cliniques réels (breast cancer, Pima diabetes).
+      </p>
+      <div class="card-meta">
+        <span class="chip">PAC-Bayes</span>
+        <span class="chip">Variational Inference</span>
+        <span class="chip">SMC</span>
+      </div>
+      <a href="https://github.com/mariadass-gabriel/Bayesian-Machine-Learning" class="card-link" target="_blank" rel="noopener">Voir le code ↗</a>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Power Laws in Markets and Earthquakes</h3>
+        <span class="card-tag">Agent-Based Modeling</span>
+      </div>
+      <p class="card-desc">
+        Modèles multi-agents (Cont-Bouchaud pour les marchés, OFC pour l'activité sismique)
+        confrontés à des données réelles S&amp;P500 / CAC40 : régression log-log sur les
+        queues de distribution pour en retrouver l'exposant de loi de puissance.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Agent-Based Models</span>
+        <span class="chip">Stochastic Processes</span>
+        <span class="chip">Power Laws</span>
+      </div>
+      <a href="https://github.com/mariadass-gabriel/heavy_tails_ABM" class="card-link" target="_blank" rel="noopener">Voir le code ↗</a>
+    </article>
+
+    <!-- Emplacement réservé : projets de stage de fin d'études (MDV) à ajouter ici une fois les repos publics -->
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <p class="eyebrow">FIG. 04 — OUTILS</p>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Machine Learning</h4>
+        <p>Inférence variationnelle, méthodes bayésiennes, PAC-Bayes, deep learning séquentiel</p>
+      </div>
+      <div class="skill-group">
+        <h4>Modélisation</h4>
+        <p>Processus stochastiques, modèles multi-agents, lois de puissance / queues lourdes</p>
+      </div>
+      <div class="skill-group">
+        <h4>Stack</h4>
+        <p>Python, PyTorch, NumPy / SciPy, LaTeX</p>
+      </div>
+      <div class="skill-group">
+        <h4>Langues</h4>
+        <p>Français (natif), Anglais (courant)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <p class="eyebrow">FIG. 05 — CONTACT</p>
+    <h2 class="section-title">Discutons</h2>
+    <p class="contact-text">
+      Ouvert aux opportunités en startup / scale-up IA — recherche appliquée, ML engineering,
+      ou rôles hybrides recherche-produit.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a>
+      <a href="https://github.com/mariadass-gabriel" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/ton-profil" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Gabriel Mariadass — <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
