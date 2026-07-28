@@ -101,7 +101,7 @@ a { color: inherit; }
   align-items: center;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 5.5rem 6vw 3rem;
+  padding: 6rem 6vw 3.5rem;
 }
 
 .hero h1 {
@@ -175,7 +175,7 @@ a { color: inherit; }
 section {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 3.25rem 6vw;
+  padding: 4rem 6vw;
   border-top: 2px solid var(--divider);
 }
 
@@ -190,7 +190,7 @@ section {
 
 .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.9rem; }
 .timeline li { display: flex; gap: 1rem; align-items: baseline; font-size: 0.95rem; }
-.t-year { font-family: var(--font-mono); color: var(--rust); font-size: 0.8rem; min-width: 3.2rem; }
+.t-year { font-family: var(--font-mono); color: var(--rust); font-size: 0.8rem; min-width: 6.5rem; white-space: nowrap; }
 .t-label { color: var(--ink); }
 
 /* WORK */
