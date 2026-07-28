@@ -1,0 +1,153 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------- PACKAGES -------------------------
+\usepackage[a4paper,margin=1.4cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+
+% ------------------------- COLORS -------------------------
+\definecolor{accent}{RGB}{20,60,110}
+
+% ------------------------- HYPERLINKS -------------------------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+}
+
+% ------------------------- GLOBAL SPACING -------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ------------------------- SECTION FORMAT -------------------------
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{2pt}\titlerule]
+\titlespacing{\section}{0pt}{6pt}{5pt}
+
+\setlist[itemize]{leftmargin=1.1em, itemsep=1pt, topsep=0pt, partopsep=0pt, parsep=0pt}
+
+% Vertical rhythm constants
+\newlength{\entrygap}      \setlength{\entrygap}{4pt}
+\newlength{\subentrygap}   \setlength{\subentrygap}{2.5pt}
+
+% ------------------------- LOGO SIZE PARAMETERS -------------------------
+\newlength{\pontsLogoSize} \setlength{\pontsLogoSize}{3cm}
+\newlength{\mvaLogoSize}   \setlength{\mvaLogoSize}{4cm}
+
+% ------------------------- CUSTOM COMMANDS -------------------------
+\newcommand{\cventry}[3]{%
+  \noindent\textbf{#1}\hfill\textit{#2}\\
+  \textit{#3}%
+}
+\newcommand{\entrysep}{\vspace{\entrygap}}
+\newcommand{\bulletsep}{\vspace{\subentrygap}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ========================= HEADER =========================
+\noindent
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\begin{minipage}[c]{0.54\textwidth}
+{\Huge \bfseries Gabriel MARIADASS}\\[0.3em]
+{\large Paris, France}\\[0.5em]
++33 6 22 45 11 75 \,\textbullet\, \href{mailto:gabrielmariadass4@gmail.com}{gabrielmariadass4@gmail.com}\\
+\href{https://www.linkedin.com/in/gabriel-mariadass}{linkedin.com/in/gabriel-mariadass}\\
+\href{https://github.com/mariadass-gabriel}{github.com/mariadass-gabriel}\\
+\textbf{Portfolio:} \href{https://mariadass-gabriel.github.io/}{mariadass-gabriel.github.io}
+\end{minipage}
+&
+\begin{minipage}[c]{0.40\textwidth}
+\raggedleft
+\begin{tabular}{@{}m{\pontsLogoSize}@{\hspace{6pt}}m{\mvaLogoSize}@{}}
+\centering
+\IfFileExists{figs/ponts.png}
+  {\includegraphics[width=\pontsLogoSize,height=\pontsLogoSize,keepaspectratio]{figs/ponts.png}}
+  {\fbox{\parbox[c][\pontsLogoSize][c]{0.9\pontsLogoSize}{\centering\tiny figs/ponts.png manquant}}}
+&
+\centering
+\IfFileExists{figs/mva.png}
+  {\includegraphics[width=\mvaLogoSize,height=\mvaLogoSize,keepaspectratio]{figs/mva.png}}
+  {\fbox{\parbox[c][\mvaLogoSize][c]{0.9\mvaLogoSize}{\centering\tiny figs/mva.png manquant}}}
+\end{tabular}
+\end{minipage}
+\end{tabularx}
+
+\vspace{0.25em}
+
+% ========================= SUMMARY =========================
+\section*{Summary}
+M.Sc. candidate in Mathematics, Vision, and Machine Learning (MVA) at ENS Paris-Saclay, combining uncertainty-aware ML research (NTU Singapore, LPSM Paris) with production-oriented ML engineering (Dassault Systèmes, Banque de France). Seeking a CIFRE PhD or an ML/AI role in industry, startup, or scale-up, based in Paris. Available from October 2026.
+
+% ========================= EXPERIENCE =========================
+\section*{Experience}
+
+\cventry{LPSM, France \& NTU, Singapore}{04/2026 -- 08/2026}{Research Intern -- Possibilistic Variational Inference}\\
+\textbf{Supervisors:} Badr-Eddine Ch\'erief-Abdellatif (CNRS, LPSM) and J\'er\'emie Houssineau (NTU)
+\bulletsep
+\begin{itemize}
+  \item Wrote reference notes on uncertainty modeling, variational inference, information theory, and possibility theory
+  \item Reproduced the reference maxitive Donsker--Varadhan (MDV) experiments and derived tractable landscapes on closed-form cases (Bernoulli--Beta, Gaussian, Laplace, bimodal mixtures)
+  \item Designed four anisotropic precision structures for PVI (isotropic, diagonal, low-rank + diagonal, block-diagonal) and analyzed their convergence properties
+  \item Investigated connections between Sharpness-Aware Minimization and PVI
+\end{itemize}
+\entrysep
+
+\cventry{Dassault Syst\`emes, France}{01/2025 -- 07/2025}{ML Engineer -- Deep Learning \& GNN (Molecular Retrosynthesis)}
+\bulletsep
+\begin{itemize}
+  \item Migrated GNN retrosynthesis pipeline from DGL to PyTorch Geometric, reducing CPU inference time by 38\%
+  \item Improved model accuracy by up to 2 percentage points through Bayesian hyperparameter optimization
+  \item Benchmarked dynamic/static quantization and refactored the preprocessing pipeline for inference optimization
+\end{itemize}
+\entrysep
+
+\cventry{Banque de France, France}{09/2024 -- 12/2024}{Data Scientist -- On-site Credit Institution Control Delegation}
+\bulletsep
+\begin{itemize}
+  \item Built neural network credit-scoring models (AUC 0.83) on 700K loan contracts, +0.14 Gini vs.\ IRB
+  \item Led PD/LGD/EAD risk-parameter and time-series analysis for a live ECB-mandated bank audit
+\end{itemize}
+
+% ========================= EDUCATION =========================
+\section*{Education}
+
+\cventry{ENS Paris-Saclay, France}{2025 -- 2026}{M.Sc. Mathematics, Vision, and Machine Learning (MVA), average 17.01/20}
+\bulletsep
+\begin{itemize}
+  \item \textbf{Key courses:} Deep Learning, Bayesian Machine Learning, Graphs in ML, Advanced Learning for Text and Graph Data, Convex Optimization for ML
+\end{itemize}
+\entrysep
+
+\cventry{\'Ecole Nationale des Ponts et Chauss\'ees, France}{2022 -- 2026}{Dipl\^ome d’Ing\'enieur -- Mathematical and Computer Engineering (IMI); final year at ENS Paris-Saclay MVA}
+\entrysep
+
+\cventry{Lyc\'ee Henri-IV, France}{2020 -- 2022}{CPGE -- PCSI/PC*}
+
+% ========================= TECHNICAL SKILLS =========================
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{ML:} PyTorch, PyTorch Geometric, Deep Learning, GNNs, Variational Inference, Bayesian Deep Learning, Quantization, Hyperparameter Optimization
+  \item \textbf{Mathematics:} Probability, Statistics, Convex Optimization, Stochastic Processes, Possibility Theory
+  \item \textbf{Programming \& Tools:} Python, SQL, R, SAS, Git, \LaTeX
+\end{itemize}
+
+% ========================= LANGUAGES & INTERESTS =========================
+\section*{Languages \& Interests}
+\begin{itemize}
+  \item \textbf{Languages:} French (native), English (C1), Spanish (B1)
+  \item \textbf{Interests:} Fitness, Travel, History, Entrepreneurship
+\end{itemize}
+
+\end{document}
