@@ -8,6 +8,7 @@
   --slate: #3e6e8e;
   --grid-line: rgba(27, 35, 46, 0.09);
   --border: rgba(27, 35, 46, 0.14);
+  --divider: rgba(27, 35, 46, 0.85);
 
   --font-display: "Newsreader", serif;
   --font-body: "IBM Plex Sans", sans-serif;
@@ -100,7 +101,7 @@ a { color: inherit; }
   align-items: center;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 7rem 6vw 5rem;
+  padding: 5.5rem 6vw 3rem;
 }
 
 .hero h1 {
@@ -174,8 +175,8 @@ a { color: inherit; }
 section {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 5rem 6vw;
-  border-top: 1px solid var(--border);
+  padding: 3.25rem 6vw;
+  border-top: 2px solid var(--divider);
 }
 
 /* ABOUT */
