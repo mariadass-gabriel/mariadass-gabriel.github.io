@@ -245,6 +245,14 @@ section {
 }
 .card-link:hover { border-bottom-color: var(--rust); }
 
+.card-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
 /* SKILLS */
 .skills-grid {
   display: grid;
