@@ -18,9 +18,9 @@
   <a href="#top" class="nav-mark">G.M.</a>
   <div class="nav-links">
     <a href="#about">Background</a>
-    <a href="#experience">Experience</a>
-    <a href="#work">Work</a>
     <a href="#research">Research</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
     <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
@@ -87,49 +87,33 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="work">
-    <p class="eyebrow">FIG. 03 · PROFESSIONAL EXPERIENCE</p>
-    <h2 class="section-title">Professional Experience</h2>
+  <!-- RESEARCH -->
+  <section id="research" class="work">
+    <p class="eyebrow">FIG. 03 · RESEARCH</p>
+    <h2 class="section-title">Current Research</h2>
 
     <article class="card">
       <div class="card-head">
-        <h3>Dassault Systèmes</h3>
-        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
+        <h3>Possibilistic Variational Inference</h3>
+        <span class="card-tag">LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
       </div>
       <p class="card-desc">
-        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
-        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, and improved
-        model accuracy by up to 2 points through Bayesian hyperparameter optimization.
-        Benchmarked dynamic and static quantization and refactored the preprocessing pipeline for
-        inference optimization.
+        Research internship supervised by Badr-Eddine Chérief-Abdellatif (CNRS, LPSM) and
+        Jérémie Houssineau (NTU). Wrote reference notes on uncertainty modeling, variational
+        inference, information theory, and possibility theory. Reproduced the reference maxitive
+        Donsker-Varadhan (MDV) experiments and derived tractable landscapes on closed-form cases
+        (Bernoulli-Beta, Gaussian, Laplace, bimodal mixtures). Designed four anisotropic
+        precision structures for PVI (isotropic, diagonal, low-rank + diagonal, block-diagonal)
+        and analyzed their convergence properties. Investigated connections between
+        Sharpness-Aware Minimization and PVI.
       </p>
       <div class="card-meta">
-        <span class="chip">PyTorch Geometric</span>
-        <span class="chip">GNN</span>
-        <span class="chip">Quantization</span>
-        <span class="chip">Bayesian Optimization</span>
+        <span class="chip">Possibilistic VI</span>
+        <span class="chip">Possibility Theory</span>
+        <span class="chip">Donsker-Varadhan</span>
+        <span class="chip">Sharpness-Aware Minimization</span>
       </div>
-      <p class="card-note">Codebase confidential, no public repository.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-head">
-        <h3>Banque de France</h3>
-        <span class="card-tag">Data Scientist · On-site Credit Institution Control Delegation · 09/2024 - 12/2024</span>
-      </div>
-      <p class="card-desc">
-        Built neural network credit-scoring models (AUC 0.83) on 700K loan contracts, a +0.14
-        Gini improvement over the internal ratings-based (IRB) benchmark. Led PD/LGD/EAD
-        risk-parameter and time-series analysis for a live ECB-mandated bank audit.
-      </p>
-      <div class="card-meta">
-        <span class="chip">Credit Scoring</span>
-        <span class="chip">Credit Risk</span>
-        <span class="chip">Econometrics</span>
-        <span class="chip">Time Series</span>
-      </div>
-      <p class="card-note">Codebase confidential, no public repository.</p>
+      <p class="card-note">Research in progress, code not yet available.</p>
     </article>
   </section>
 
@@ -210,33 +194,49 @@
     </article>
   </section>
 
-  <!-- RESEARCH -->
-  <section id="research" class="work">
-    <p class="eyebrow">FIG. 05 · RESEARCH</p>
-    <h2 class="section-title">Current Research</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="work">
+    <p class="eyebrow">FIG. 05 · PROFESSIONAL EXPERIENCE</p>
+    <h2 class="section-title">Professional Experience</h2>
 
     <article class="card">
       <div class="card-head">
-        <h3>Possibilistic Variational Inference</h3>
-        <span class="card-tag">LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
+        <h3>Dassault Systèmes</h3>
+        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
       </div>
       <p class="card-desc">
-        Research internship supervised by Badr-Eddine Chérief-Abdellatif (CNRS, LPSM) and
-        Jérémie Houssineau (NTU). Wrote reference notes on uncertainty modeling, variational
-        inference, information theory, and possibility theory. Reproduced the reference maxitive
-        Donsker-Varadhan (MDV) experiments and derived tractable landscapes on closed-form cases
-        (Bernoulli-Beta, Gaussian, Laplace, bimodal mixtures). Designed four anisotropic
-        precision structures for PVI (isotropic, diagonal, low-rank + diagonal, block-diagonal)
-        and analyzed their convergence properties. Investigated connections between
-        Sharpness-Aware Minimization and PVI.
+        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
+        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, and improved
+        model accuracy by up to 2 points through Bayesian hyperparameter optimization.
+        Benchmarked dynamic and static quantization and refactored the preprocessing pipeline for
+        inference optimization.
       </p>
       <div class="card-meta">
-        <span class="chip">Possibilistic VI</span>
-        <span class="chip">Possibility Theory</span>
-        <span class="chip">Donsker-Varadhan</span>
-        <span class="chip">Sharpness-Aware Minimization</span>
+        <span class="chip">PyTorch Geometric</span>
+        <span class="chip">GNN</span>
+        <span class="chip">Quantization</span>
+        <span class="chip">Bayesian Optimization</span>
       </div>
-      <p class="card-note">Research in progress, code not yet available.</p>
+      <p class="card-note">Codebase confidential, no public repository.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Banque de France</h3>
+        <span class="card-tag">Data Scientist · On-site Credit Institution Control Delegation · 09/2024 - 12/2024</span>
+      </div>
+      <p class="card-desc">
+        Built neural network credit-scoring models (AUC 0.83) on 700K loan contracts, a +0.14
+        Gini improvement over the internal ratings-based (IRB) benchmark. Led PD/LGD/EAD
+        risk-parameter and time-series analysis for a live ECB-mandated bank audit.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Credit Scoring</span>
+        <span class="chip">Credit Risk</span>
+        <span class="chip">Econometrics</span>
+        <span class="chip">Time Series</span>
+      </div>
+      <p class="card-note">Codebase confidential, no public repository.</p>
     </article>
   </section>
 
