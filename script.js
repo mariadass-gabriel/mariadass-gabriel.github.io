@@ -8,6 +8,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const scatterGroup = document.getElementById('scatter');
   const ticksGroup = document.querySelector('.ticks');
   const regline = document.getElementById('regline');
+  if (!scatterGroup || !ticksGroup || !regline) return;
 
   const plotLeft = 60, plotRight = 440, plotTop = 30, plotBottom = 360;
 
