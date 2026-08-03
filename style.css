@@ -6,6 +6,7 @@
   --ink-faint: #7c8790;
   --rust: #b54b32;
   --slate: #3e6e8e;
+  --moss: #7d8c4e;
   --grid-line: rgba(27, 35, 46, 0.09);
   --border: rgba(27, 35, 46, 0.14);
   --divider: rgba(27, 35, 46, 0.4);
@@ -95,6 +96,10 @@ a { color: inherit; }
 
 /* HERO */
 .hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
   max-width: 1180px;
   margin: 0 auto;
   padding: 6rem 6vw 3.5rem;
@@ -142,24 +147,83 @@ a { color: inherit; }
 
 .hero-figure { text-align: center; }
 
-#plot { width: 100%; height: auto; max-width: 420px; }
+/* FIGURES (project result illustrations, reused in hero + project cards) */
+.card-figure { margin: 0 0 1.2rem 0; }
 
-.axis { stroke: var(--ink-faint); stroke-width: 1; }
-.axis-label { font-family: var(--font-mono); font-size: 11px; fill: var(--ink-faint); }
+.fig-plot { width: 100%; height: auto; max-width: 320px; display: block; }
+.hero-figure .fig-plot { max-width: 420px; margin: 0 auto; }
 
-#regline {
-  fill: none;
-  stroke: var(--rust);
-  stroke-width: 2;
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: draw 1.8s ease-out 0.3s forwards;
+.fig-axis { stroke: var(--ink-faint); stroke-width: 1; }
+.fig-grid { stroke: var(--border); stroke-width: 1; }
+
+.fig-title {
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 500;
+  fill: var(--ink);
 }
+.fig-axis-title {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  fill: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.fig-label { font-family: var(--font-mono); font-size: 7px; fill: var(--ink-faint); }
+.fig-value { font-family: var(--font-mono); font-size: 8px; fill: var(--ink); }
+.fig-value.rust { fill: var(--rust); }
+.fig-value.slate { fill: var(--slate); }
+.fig-value.moss { fill: var(--moss); }
 
-@keyframes draw { to { stroke-dashoffset: 0; } }
+.fig-bar {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: fig-grow 0.7s ease-out forwards;
+}
+.fig-bar.rust { fill: var(--rust); }
+.fig-bar.slate { fill: var(--slate); }
+@keyframes fig-grow { to { transform: scaleY(1); } }
 
-.scatter-pt { fill: var(--slate); opacity: 0; animation: fadein 0.4s ease-out forwards; }
-@keyframes fadein { to { opacity: 0.75; } }
+.fig-line { fill: none; stroke-width: 1.6; }
+.fig-line.rust { stroke: var(--rust); }
+.fig-line.slate { stroke: var(--slate); }
+.fig-line.moss { stroke: var(--moss); }
+.fig-line.ink { stroke: var(--ink-soft); }
+
+.fig-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: fig-draw 1.6s ease-out 0.15s forwards;
+}
+@keyframes fig-draw { to { stroke-dashoffset: 0; } }
+
+.fig-dash { stroke-dasharray: 3 3; }
+
+.fig-dot { opacity: 0; animation: fig-pt-in 0.4s ease-out 1.2s forwards; }
+.fig-dot.rust { fill: var(--rust); }
+.fig-dot.slate { fill: var(--slate); }
+.fig-dot.moss { fill: var(--moss); }
+@keyframes fig-pt-in { to { opacity: 1; } }
+
+.fig-fade { opacity: 0; animation: fig-pt-in 0.6s ease-out 0.9s forwards; }
+
+.fig-loop-pt {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: fig-loop-pop 3.6s ease-in-out infinite;
+}
+.fig-loop-pt.rust { fill: var(--rust); }
+.fig-loop-pt.slate { fill: var(--slate); }
+@keyframes fig-loop-pop {
+  0% { opacity: 0; transform: scale(0.3); }
+  14% { opacity: 1; transform: scale(1.35); }
+  22% { opacity: 1; transform: scale(1); }
+  70% { opacity: 1; transform: scale(1); }
+  88% { opacity: 0.15; transform: scale(0.75); }
+  100% { opacity: 0; transform: scale(0.3); }
+}
 
 .fig-caption {
   font-family: var(--font-mono);
@@ -191,6 +255,18 @@ section {
 .t-label { color: var(--ink); }
 
 /* WORK */
+.project-category { margin-bottom: 1rem; }
+.project-category:not(:first-child) { margin-top: 2.5rem; }
+
+.category-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--rust);
+  margin: 0 0 1rem 0;
+}
+
 .card {
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.35);
