@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=11">
+<link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -18,9 +18,9 @@
   <a href="#top" class="nav-mark">G.M.</a>
   <div class="nav-links">
     <a href="#about">Background</a>
+    <a href="#experience">Experience</a>
     <a href="#research">Research</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
     <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
@@ -34,39 +34,15 @@
     <div class="hero-text">
       <h1>Gabriel Mariadass</h1>
       <p class="hero-sub">
-        M.Sc. candidate in Mathematics, Vision, and Machine Learning (MVA) at ENS Paris-Saclay,
-        combining uncertainty-aware ML research (NTU Singapore, LPSM Paris) with
-        production-oriented ML engineering (Dassault Systèmes, Banque de France). Seeking a
-        CIFRE PhD or an ML/AI role in industry, startup, or scale-up, based in Paris. Available
-        from October 2026.
+        M.Sc. MVA at ENS Paris-Saclay and M.Eng. at École Nationale des Ponts et Chaussées,
+        combining applied ML engineering at Dassault Systèmes and Banque de France with research
+        in uncertainty-aware ML at NTU Singapore. Interested in a CIFRE PhD or an AI Engineering
+        role in industry, startup or scale-up. Available from October 2026.
       </p>
       <div class="hero-cta">
-        <a href="#research" class="btn-primary">View research</a>
-        <a href="CV.pdf" class="btn-ghost" target="_blank" rel="noopener">View CV ↗</a>
+        <a href="CV.pdf" class="btn-primary" target="_blank" rel="noopener">View CV ↗</a>
         <a href="https://github.com/mariadass-gabriel" class="btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
-    </div>
-    <div class="hero-figure">
-      <svg class="fig-plot" viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A contour map of a loss landscape with an optimizer trajectory spiraling inward from a starting point to a minimum">
-        <text x="40" y="24" class="fig-title">Navigating a loss landscape</text>
-
-        <ellipse cx="250" cy="145" rx="175" ry="118" fill="none" class="fig-axis" opacity="0.5"/>
-        <ellipse cx="244" cy="139" rx="136" ry="91" fill="none" class="fig-axis" opacity="0.6"/>
-        <ellipse cx="238" cy="134" rx="97" ry="65" fill="none" stroke="var(--slate)" stroke-width="1" opacity="0.55"/>
-        <ellipse cx="233" cy="129" rx="60" ry="41" fill="var(--rust)" opacity="0.1"/>
-        <ellipse cx="233" cy="129" rx="60" ry="41" fill="none" stroke="var(--rust)" stroke-width="1" opacity="0.5"/>
-        <ellipse cx="230" cy="126" rx="26" ry="18" fill="var(--rust)" opacity="0.22"/>
-        <ellipse cx="230" cy="126" rx="26" ry="18" fill="none" stroke="var(--rust)" stroke-width="1.1" opacity="0.7"/>
-
-        <path d="M92,72 C150,56 270,44 345,86 C398,124 382,205 305,232 C228,256 155,214 178,158 C195,120 218,122 230,126" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.2s"/>
-
-        <circle cx="92" cy="72" r="3.6" class="fig-dot slate" style="animation-delay:0.1s"/>
-        <circle cx="230" cy="126" r="3.6" class="fig-dot rust" style="animation-delay:1.4s"/>
-
-        <text x="96" y="64" class="fig-label">start</text>
-        <text x="234" y="112" class="fig-label">minimum</text>
-      </svg>
-      <p class="fig-caption">Current Research · Possibilistic Variational Inference: investigating connections between Sharpness-Aware Minimization and the Bayesian Learning Rule</p>
     </div>
   </section>
 
@@ -75,10 +51,10 @@
     <h2 class="section-title">Background</h2>
     <div class="about-grid">
       <p class="about-text">
-        An applied mathematics track: preparatory classes at Lycée Henri-IV, École Nationale des
-        Ponts et Chaussées (ENPC), a gap year spent on two applied ML engineering roles, then a
-        M.Sc. in Mathematics, Vision, and Machine Learning (MVA) at ENS Paris-Saclay, followed by
-        ongoing research on possibilistic variational inference.
+        Preparatory classes at Lycée Henri-IV, then a M.Eng. at École Nationale des Ponts et
+        Chaussées (ENPC), followed by a M.Sc. in Mathematics, Vision, and Machine Learning (MVA)
+        at ENS Paris-Saclay. A gap year was spent on two applied ML engineering roles, and the
+        final-year research internship focuses on possibilistic variational inference.
       </p>
       <ol class="timeline">
         <li><span class="t-year">2020 - 2022</span><span class="t-label">CPGE PCSI/PC*, Lycée Henri-IV</span></li>
@@ -91,9 +67,54 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="work">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Dassault Systèmes</h3>
+        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
+      </div>
+      <p class="card-desc">
+        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
+        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, and improved
+        model accuracy by up to 2 points through Bayesian hyperparameter optimization.
+        Benchmarked dynamic and static quantization and refactored the preprocessing pipeline for
+        inference optimization.
+      </p>
+      <div class="card-meta">
+        <span class="chip">PyTorch Geometric</span>
+        <span class="chip">GNN</span>
+        <span class="chip">Quantization</span>
+        <span class="chip">Bayesian Optimization</span>
+      </div>
+      <p class="card-note">Codebase confidential, no public repository.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Banque de France</h3>
+        <span class="card-tag">Data Scientist · On-site Credit Institution Control Delegation · 09/2024 - 12/2024</span>
+      </div>
+      <p class="card-desc">
+        Built neural network credit-scoring models (AUC 0.83) on 700K loan contracts, a +0.14
+        Gini improvement over the internal ratings-based (IRB) benchmark. Led PD/LGD/EAD
+        risk-parameter and time-series analysis for a live ECB-mandated bank audit.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Credit Scoring</span>
+        <span class="chip">Credit Risk</span>
+        <span class="chip">Econometrics</span>
+        <span class="chip">Time Series</span>
+      </div>
+      <p class="card-note">Codebase confidential, no public repository.</p>
+    </article>
+  </section>
+
   <!-- RESEARCH -->
   <section id="research" class="work">
-    <h2 class="section-title">Current Research</h2>
+    <h2 class="section-title">Research</h2>
 
     <article class="card">
       <div class="card-head">
@@ -116,7 +137,7 @@
         <span class="chip">Donsker-Varadhan</span>
         <span class="chip">Sharpness-Aware Minimization</span>
       </div>
-      <p class="card-note">Research in progress, code not yet available.</p>
+      <p class="card-note">Code not yet public, pending potential publication.</p>
     </article>
   </section>
 
@@ -439,68 +460,31 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="work">
-    <h2 class="section-title">Professional Experience</h2>
-
-    <article class="card">
-      <div class="card-head">
-        <h3>Dassault Systèmes</h3>
-        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
-      </div>
-      <p class="card-desc">
-        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
-        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, and improved
-        model accuracy by up to 2 points through Bayesian hyperparameter optimization.
-        Benchmarked dynamic and static quantization and refactored the preprocessing pipeline for
-        inference optimization.
-      </p>
-      <div class="card-meta">
-        <span class="chip">PyTorch Geometric</span>
-        <span class="chip">GNN</span>
-        <span class="chip">Quantization</span>
-        <span class="chip">Bayesian Optimization</span>
-      </div>
-      <p class="card-note">Codebase confidential, no public repository.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-head">
-        <h3>Banque de France</h3>
-        <span class="card-tag">Data Scientist · On-site Credit Institution Control Delegation · 09/2024 - 12/2024</span>
-      </div>
-      <p class="card-desc">
-        Built neural network credit-scoring models (AUC 0.83) on 700K loan contracts, a +0.14
-        Gini improvement over the internal ratings-based (IRB) benchmark. Led PD/LGD/EAD
-        risk-parameter and time-series analysis for a live ECB-mandated bank audit.
-      </p>
-      <div class="card-meta">
-        <span class="chip">Credit Scoring</span>
-        <span class="chip">Credit Risk</span>
-        <span class="chip">Econometrics</span>
-        <span class="chip">Time Series</span>
-      </div>
-      <p class="card-note">Codebase confidential, no public repository.</p>
-    </article>
-  </section>
-
   <!-- SKILLS -->
   <section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title">Skills, Languages &amp; Interests</h2>
     <div class="skills-grid">
       <div class="skill-group">
-        <h4>Machine Learning</h4>
-        <p>PyTorch, PyTorch Geometric, Deep Learning, GNNs, Variational Inference, Bayesian Deep
-        Learning, Quantization, Hyperparameter Optimization</p>
+        <h4>Theory &amp; Mathematics</h4>
+        <p>Probability, Statistics, Convex Optimization, Time Series, Bayesian Learning,
+        Information Theory</p>
       </div>
       <div class="skill-group">
-        <h4>Mathematics</h4>
-        <p>Probability, Statistics, Convex Optimization, Stochastic Processes, Possibility
-        Theory</p>
+        <h4>Programming</h4>
+        <p>Python, C++, SQL</p>
       </div>
       <div class="skill-group">
-        <h4>Programming &amp; Tools</h4>
-        <p>Python, SQL, R, SAS, Git, LaTeX</p>
+        <h4>Deep Learning &amp; ML</h4>
+        <p>PyTorch, PyTorch Geometric, DGL, Scikit-learn, GNNs, Model Quantization, Bayesian
+        Optimization</p>
+      </div>
+      <div class="skill-group">
+        <h4>MLOps &amp; Orchestration</h4>
+        <p>Docker, Kubernetes, FastAPI, MLflow, Airflow, CI/CD</p>
+      </div>
+      <div class="skill-group">
+        <h4>Data, Cloud &amp; Storage</h4>
+        <p>PostgreSQL, Redis, Cloud (AWS/GCP), NumPy, Pandas, Git</p>
       </div>
       <div class="skill-group">
         <h4>Languages</h4>
@@ -508,7 +492,8 @@
       </div>
       <div class="skill-group">
         <h4>Interests</h4>
-        <p>Fitness, Travel, History, Entrepreneurship</p>
+        <p>Muay Thai / Kickboxing, Running, Weightlifting, Nutrition, AI Tech Watch, Tech
+        Entrepreneurship, Reading, Travel</p>
       </div>
     </div>
   </section>
@@ -517,12 +502,11 @@
   <section id="contact" class="contact">
     <h2 class="section-title">Let's talk</h2>
     <p class="contact-text">
-      Seeking a CIFRE PhD or an ML/AI role in industry, startup, or scale-up, based in Paris,
-      combining variational inference research with applied ML engineering. Available from
-      October 2026.
+      Seeking a CIFRE PhD or an AI Engineering role in industry, startup or scale-up, based in
+      Paris. Available from October 2026. Feel free to reach out:
     </p>
     <div class="contact-links">
-      <a href="mailto:gabrielmariadass4@gmail.com">gabrielmariadass4@gmail.com</a>
+      <a href="mailto:gabrielmariadasspro@gmail.com">gabrielmariadasspro@gmail.com</a>
       <a href="https://github.com/mariadass-gabriel" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/gabriel-mariadass" target="_blank" rel="noopener">LinkedIn</a>
       <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
