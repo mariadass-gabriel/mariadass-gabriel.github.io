@@ -113,7 +113,7 @@ a { color: inherit; }
 .hero-sub {
   font-size: 1.05rem;
   color: var(--ink-soft);
-  max-width: 46ch;
+  max-width: 62ch;
   margin: 0 0 2.2rem 0;
 }
 
