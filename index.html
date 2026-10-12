@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Mariadass · Portfolio</title>
+<meta name="description" content="Gabriel Mariadass · M.Sc. candidate in Mathematics, Vision, and Machine Learning (MVA), research in possibilistic variational inference and applied ML engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+
+<div class="grid-backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="#top" class="nav-mark">G.M.</a>
+  <div class="nav-links">
+    <a href="#about">Background</a>
+    <a href="#personal-projects">Personal</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Gabriel Mariadass</h1>
+      <p class="hero-sub">
+        M.Sc. MVA at ENS Paris-Saclay and M.Eng. at École Nationale des Ponts et Chaussées,
+        combining applied ML engineering at Dassault Systèmes and Banque de France with research
+        in uncertainty-aware ML at NTU Singapore. Interested in a CIFRE PhD or an AI Engineering
+        role in industry, startup or scale-up. Available from October 2026.
+      </p>
+      <div class="hero-cta">
+        <a href="CV.pdf" class="btn-primary" target="_blank" rel="noopener">View CV ↗</a>
+        <a href="https://github.com/mariadass-gabriel" class="btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2 class="section-title">Background</h2>
+    <div class="about-grid">
+      <p class="about-text">
+        Preparatory classes at Lycée Henri-IV, then an M.Eng. at École Nationale des Ponts et
+        Chaussées (ENPC), whose final year was completed with the M.Sc. Mathematics, Vision, and
+        Machine Learning (MVA) at ENS Paris-Saclay. A gap year was spent on two applied ML
+        engineering roles, and the final-year research internship focused on possibilistic
+        variational inference.
+      </p>
+      <ol class="timeline">
+        <li><span class="t-year">2020 - 2022</span><span class="t-label">CPGE PCSI/PC*, Lycée Henri-IV</span></li>
+        <li><span class="t-year">2022 - 2026</span><span class="t-label">École Nationale des Ponts et Chaussées,&nbsp;IMI</span></li>
+        <li><span class="t-year">09/2024 - 12/2024</span><span class="t-label">Data Scientist, Banque de France</span></li>
+        <li><span class="t-year">01/2025 - 07/2025</span><span class="t-label">ML Engineer, Dassault Systèmes</span></li>
+        <li><span class="t-year">2025 - 2026</span><span class="t-label">M.Sc. MVA, ENS Paris-Saclay</span></li>
+        <li><span class="t-year">04/2026 - 08/2026</span><span class="t-label">Research, LPSM &amp; NTU Singapore</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PERSONAL PROJECTS -->
+  <section id="personal-projects" class="work">
+    <h2 class="section-title">Personal Projects</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>price-api</h3>
+        <span class="card-tag">MLOps &amp; Deployment · Personal project</span>
+      </div>
+      <p class="card-desc">
+        Tabular regression as a testbed for end-to-end ML deployment, focused on serving, calibrated
+        uncertainty and automation. Ridge model, selected over XGBoost and tracked with MLflow,
+        predicting hardware prices with a 90% split-conformal interval (88% empirical test
+        coverage). Tests, Docker build and Cloud Run deployment automated with GitHub Actions.
+      </p>
+      <div class="card-meta">
+        <span class="chip">FastAPI</span>
+        <span class="chip">MLflow</span>
+        <span class="chip">CI/CD (GitHub Actions)</span>
+      </div>
+      <a href="https://github.com/mariadass-gabriel/price-api" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      <!-- DEMO-LINK START: delete from here to DEMO-LINK END, plus the files demo.html and demo.js, once the demo is shut down (planned around 2027-01-10) -->
+      <a href="demo.html" class="card-link" target="_blank" rel="noopener">View demo ↗</a>
+      <!-- DEMO-LINK END -->
+    </article>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="work">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Dassault Systèmes</h3>
+        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
+      </div>
+      <p class="card-desc">
+        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
+        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, improved model
+        accuracy by up to 2 percentage points via Bayesian hyperparameter optimization, explored
+        quantization for further inference speedup, and refactored the preprocessing pipeline.
+      </p>
+      <div class="card-meta">
+        <span class="chip">PyTorch Geometric</span>
+        <span class="chip">GNN</span>
+        <span class="chip">Quantization</span>
+      </div>
+      <p class="card-note">Codebase confidential, no public repository.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Banque de France</h3>
+        <span class="card-tag">Data Scientist · On-site Credit Institution Control Delegation · 09/2024 - 12/2024</span>
+      </div>
+      <p class="card-desc">
+        On-site credit institution control delegation for a live ECB-mandated audit of a major
+        French bank. Built neural network credit-scoring models with AUC 0.83 on 700K loan
+        contracts, raising Gini +0.14 vs. internal IRB models, and led PD/LGD/EAD risk-parameter
+        analysis and time-series studies for the audit.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Time Series</span>
+        <span class="chip">Regression Analysis</span>
+      </div>
+      <p class="card-note">Codebase confidential, no public repository.</p>
+    </article>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="work">
+    <h2 class="section-title">Research</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Possibilistic Variational Inference</h3>
+        <span class="card-tag">ML Researcher · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
+      </div>
+      <p class="card-desc">
+        Possibilistic variational inference research at LPSM and NTU. Reproduced reference
+        LeNet-5/Fashion-MNIST results as a baseline, diagnosed candidate misspecification across
+        four posterior landscapes, developed learned precision structures improving accuracy,
+        NLL, and calibration, and extended a SAM connection into an adaptive, learned
+        perturbation radius.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Variational Inference</span>
+        <span class="chip">Possibility Theory</span>
+        <span class="chip">Sharpness-Aware Minimization</span>
+      </div>
+      <p class="card-note">Code not yet public, pending potential publication.</p>
+    </article>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="work">
+    <h2 class="section-title">Academic Projects</h2>
+
+    <div class="project-category">
+      <h3 class="category-title">Deep Learning</h3>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Molecular Graph Captioning</h3>
+          <span class="card-tag">Advanced Learning for Text and Graph Data (ALTEGRAD) · MVA</span>
+        </div>
+        <p class="card-desc">
+          ALTEGRAD data challenge translating molecular graphs into natural-language
+          descriptions, using a GINE graph encoder contrastively aligned with e5-base-v2 text
+          embeddings, nearest-neighbor retrieval, and a neural reranker. The Kaggle leaderboard
+          score improved from 0.487 (baseline) to 0.661 with retrieval and reranking, ahead of
+          the LoRA-fine-tuned LLM generation variants also explored.
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart showing the Kaggle leaderboard score rising across three pipeline stages: baseline, retrieval, and retrieval with reranking">
+            <text x="46" y="18" class="fig-title">Retrieval pipeline improves captioning score</text>
+
+            <line x1="46" y1="94" x2="280" y2="94" class="fig-grid"/>
+            <text x="42" y="97" text-anchor="end" class="fig-label">0.5</text>
+
+            <line x1="46" y1="28" x2="46" y2="160" class="fig-axis"/>
+            <line x1="46" y1="160" x2="280" y2="160" class="fig-axis"/>
+
+            <rect x="46" y="95.7" width="40" height="64.3" class="fig-bar slate" style="animation-delay:0.1s"/>
+            <rect x="143" y="80.3" width="40" height="79.7" class="fig-bar slate" style="animation-delay:0.25s"/>
+            <rect x="240" y="72.7" width="40" height="87.3" class="fig-bar rust" style="animation-delay:0.4s"/>
+
+            <text x="66" y="90" text-anchor="middle" class="fig-value">0.487</text>
+            <text x="163" y="75" text-anchor="middle" class="fig-value">0.604</text>
+            <text x="260" y="67" text-anchor="middle" class="fig-value">0.661</text>
+
+            <text x="66" y="176" text-anchor="middle" class="fig-label">Baseline</text>
+            <text x="163" y="176" text-anchor="middle" class="fig-label">Retrieval</text>
+            <text x="260" y="176" text-anchor="middle" class="fig-label">+ Rerank</text>
+            <text x="14" y="94" text-anchor="middle" class="fig-axis-title" transform="rotate(-90 14 94)">Score</text>
+          </svg>
+          <p class="fig-caption">Kaggle leaderboard score (BLEU-4 F1 / BERTScore)</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">GNN (GINE)</span>
+          <span class="chip">Contrastive Learning</span>
+          <span class="chip">Text Embeddings</span>
+          <span class="chip">Retrieval</span>
+          <span class="chip">Reranking</span>
+          <span class="chip">LLM Fine-Tuning (LoRA)</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/molecular-graph-captioning" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>minGRU and minLSTM: Reproduction and Extension</h3>
+          <span class="card-tag">Deep Learning · MVA</span>
+        </div>
+        <p class="card-desc">
+          Reproduction and extension of <em>"Were RNNs All We Needed?"</em>, benchmarking the
+          parallelizable minGRU / minLSTM architectures against GRU, LSTM and Transformer
+          baselines, with depth-ablation and sequence-length generalization studies. The
+          minimal architectures reach up to 50x faster per-step runtime at the largest tested
+          sequence length.
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of per-step runtime versus sequence length: standard architectures rise steeply while minimal architectures stay flat, up to 50 times faster at the longest sequence tested">
+            <text x="46" y="18" class="fig-title">Per-step runtime vs. sequence length</text>
+
+            <line x1="46" y1="28" x2="46" y2="160" class="fig-axis"/>
+            <line x1="46" y1="160" x2="280" y2="160" class="fig-axis"/>
+
+            <path d="M54,158 L110,150 L160,130 L210,90 L272,32" class="fig-line slate fig-draw" pathLength="1"/>
+            <path d="M54,159 L110,158.7 L160,158.3 L210,157.8 L272,157.4" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.3s"/>
+
+            <text x="276" y="30" class="fig-value slate">standard</text>
+            <text x="276" y="153" class="fig-value rust">minimal</text>
+
+            <text x="163" y="196" text-anchor="middle" class="fig-axis-title">Sequence length</text>
+            <text x="14" y="94" text-anchor="middle" class="fig-axis-title" transform="rotate(-90 14 94)">Runtime (rel.)</text>
+          </svg>
+          <p class="fig-caption">Reported ratio: minimal architectures up to 50x faster at the largest tested length</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">PyTorch</span>
+          <span class="chip">Sequence Modeling</span>
+          <span class="chip">Parallel Scan</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/minRNNs" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+    </div>
+
+    <div class="project-category">
+      <h3 class="category-title">Probabilistic Modeling</h3>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Variational Approximations of Gibbs Posteriors</h3>
+          <span class="card-tag">Bayesian Machine Learning · MVA</span>
+        </div>
+        <p class="card-desc">
+          Reproduction and extension of Alquier, Ridgway &amp; Chopin's PAC-Bayesian analysis
+          of variational approximations to the Gibbs posterior, comparing two variational
+          families against a reference SMC sampler on real classification datasets (breast
+          cancer, Pima diabetes). The variational approximations match SMC test accuracy while
+          running about twice as fast at high temperature.
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of computation time versus lambda: SMC rises steeply while the F2 mean-field and F3 low-rank variational families each stay flat">
+            <text x="46" y="18" class="fig-title">Runtime vs. temperature (lambda)</text>
+
+            <line x1="46" y1="116" x2="280" y2="116" class="fig-grid"/>
+            <line x1="46" y1="72" x2="280" y2="72" class="fig-grid"/>
+            <text x="42" y="119" text-anchor="end" class="fig-label">4s</text>
+            <text x="42" y="75" text-anchor="end" class="fig-label">8s</text>
+
+            <line x1="46" y1="28" x2="46" y2="160" class="fig-axis"/>
+            <line x1="46" y1="160" x2="280" y2="160" class="fig-axis"/>
+
+            <path d="M54,116 L272,116" class="fig-line slate fig-draw" pathLength="1"/>
+            <path d="M54,105 L272,105" class="fig-line slate fig-dash fig-fade"/>
+            <path d="M54,151.75 L90.3,138 L126.7,116 L163,94 L199.3,72 L235.7,55.5 L272,33.5" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.25s"/>
+
+            <text x="277" y="30" class="fig-value rust">SMC</text>
+            <text x="277" y="102" class="fig-value slate">F3</text>
+            <text x="277" y="120" class="fig-value slate">F2</text>
+
+            <text x="54" y="176" text-anchor="middle" class="fig-label">1</text>
+            <text x="163" y="176" text-anchor="middle" class="fig-label">20</text>
+            <text x="272" y="176" text-anchor="middle" class="fig-label">100</text>
+            <text x="163" y="196" text-anchor="middle" class="fig-axis-title">lambda</text>
+            <text x="14" y="94" text-anchor="middle" class="fig-axis-title" transform="rotate(-90 14 94)">Time (s)</text>
+          </svg>
+          <p class="fig-caption">Reported endpoints: SMC 0.75s to 11.5s; F2 (mean-field) ~4s and F3 (low-rank) ~5s, both flat</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">PAC-Bayes</span>
+          <span class="chip">Variational Inference</span>
+          <span class="chip">SMC</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/variational-gibbs-posteriors" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Adaptive MALA with Truncated Drift</h3>
+          <span class="card-tag">Computational Statistics · MVA</span>
+        </div>
+        <p class="card-desc">
+          Reproduction of Atchadé's adaptive truncated-drift MALA algorithm, compared against
+          standard MALA on three sampling targets, including a light-tailed distribution and
+          an anisotropic Gaussian. On the light-tailed target, standard MALA stalls (0.000
+          acceptance rate) while the truncated adaptive version keeps sampling at 0.685.
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A 2D map of samples on an anisotropic Gaussian target: standard MALA's samples form a small isotropic cluster that misses the target's elongation, while adaptive truncated-drift MALA's samples spread to match the true tilted covariance">
+            <text x="46" y="18" class="fig-title">Sampling an anisotropic 2D Gaussian</text>
+
+            <line x1="240" y1="36" x2="254" y2="36" class="fig-axis fig-dash"/>
+            <text x="258" y="39" class="fig-label">true covariance</text>
+
+            <rect x="70" y="48" width="190" height="135" fill="none" class="fig-axis"/>
+            <ellipse cx="165" cy="115" rx="78" ry="26" transform="rotate(-22 165 115)" fill="none" class="fig-axis fig-dash"/>
+
+            <g>
+              <circle cx="140" cy="121" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.00s"/>
+              <circle cx="155" cy="115" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.12s"/>
+              <circle cx="148" cy="133" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.24s"/>
+              <circle cx="160" cy="125" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.36s"/>
+              <circle cx="145" cy="137" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.48s"/>
+              <circle cx="152" cy="112" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.60s"/>
+              <circle cx="158" cy="139" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.72s"/>
+              <circle cx="142" cy="125" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.84s"/>
+              <circle cx="150" cy="109" r="2.6" class="fig-loop-pt slate" style="animation-delay:0.96s"/>
+              <circle cx="163" cy="129" r="2.6" class="fig-loop-pt slate" style="animation-delay:1.08s"/>
+            </g>
+            <g>
+              <circle cx="95.5" cy="143.1" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.05s"/>
+              <circle cx="109.4" cy="137.5" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.15s"/>
+              <circle cx="113.9" cy="148.6" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.25s"/>
+              <circle cx="123.3" cy="131.9" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.35s"/>
+              <circle cx="118.1" cy="118.9" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.45s"/>
+              <circle cx="137.2" cy="126.25" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.55s"/>
+              <circle cx="143.2" cy="141.1" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.65s"/>
+              <circle cx="151.1" cy="120.6" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.75s"/>
+              <circle cx="144.4" cy="103.9" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.85s"/>
+              <circle cx="165" cy="115" r="2.6" class="fig-loop-pt rust" style="animation-delay:0.95s"/>
+              <circle cx="172.5" cy="133.5" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.05s"/>
+              <circle cx="157.5" cy="96.5" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.15s"/>
+              <circle cx="178.9" cy="109.4" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.25s"/>
+              <circle cx="185.7" cy="126.1" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.35s"/>
+              <circle cx="192.8" cy="103.75" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.45s"/>
+              <circle cx="186.8" cy="88.95" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.55s"/>
+              <circle cx="206.7" cy="98.1" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.65s"/>
+              <circle cx="211.95" cy="111.1" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.75s"/>
+              <circle cx="220.6" cy="92.5" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.85s"/>
+              <circle cx="216.1" cy="81.4" r="2.6" class="fig-loop-pt rust" style="animation-delay:1.95s"/>
+              <circle cx="234.5" cy="86.9" r="2.6" class="fig-loop-pt rust" style="animation-delay:2.05s"/>
+            </g>
+
+            <text x="120" y="201" text-anchor="middle" class="fig-value slate">standard MALA</text>
+            <text x="230" y="201" text-anchor="middle" class="fig-value rust">adaptive T-MALA</text>
+          </svg>
+          <p class="fig-caption">Reproduced finding: adaptive T-MALA's sample covariance matches the true anisotropic target; standard MALA stays isotropic and misses the elongation</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">MCMC</span>
+          <span class="chip">MALA</span>
+          <span class="chip">Adaptive Sampling</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/adaptive-mala-truncated-drift" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+    </div>
+
+    <div class="project-category">
+      <h3 class="category-title">Rare Events</h3>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Change-Point Detection via Direct Density-Ratio Estimation</h3>
+          <span class="card-tag">Time Series Machine Learning · MVA</span>
+        </div>
+        <p class="card-desc">
+          Implementation of online KLIEP from scratch for change-point detection, evaluated on
+          synthetic and real time-series data against CUSUM and PELT baselines. On real
+          activity-recognition data, KLIEP reaches 0.77 accuracy vs. 0.13 (CUSUM) and 0.23
+          (PELT).
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of two change points in a motion-sensor signal: KLIEP detects both accurately, CUSUM detects both late due to its known lag, and PELT detects both slightly early">
+            <text x="46" y="18" class="fig-title">Detecting shifts in a motion-sensor signal</text>
+
+            <line x1="46" y1="32" x2="60" y2="32" class="fig-axis fig-dash"/>
+            <text x="64" y="35" class="fig-label">true change point</text>
+
+            <line x1="140" y1="42" x2="140" y2="170" class="fig-axis fig-dash"/>
+            <line x1="240" y1="42" x2="240" y2="170" class="fig-axis fig-dash"/>
+
+            <path d="M40,95 L70,93 L100,96 L130,94 L140,73 L150,51 L180,50 L210,49 L230,51 L240,71 L250,94 L280,95 L310,93 L340,96" class="fig-line ink fig-draw" pathLength="1"/>
+
+            <line x1="40" y1="170" x2="340" y2="170" class="fig-axis"/>
+
+            <line x1="128" y1="42" x2="128" y2="170" class="fig-line moss fig-draw" pathLength="1" style="animation-delay:0.3s"/>
+            <line x1="227" y1="42" x2="227" y2="170" class="fig-line moss fig-draw" pathLength="1" style="animation-delay:0.35s"/>
+            <line x1="142" y1="42" x2="142" y2="170" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.45s"/>
+            <line x1="238" y1="42" x2="238" y2="170" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.5s"/>
+            <line x1="155" y1="42" x2="155" y2="170" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.6s"/>
+            <line x1="253" y1="42" x2="253" y2="170" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.65s"/>
+
+            <text x="92" y="196" text-anchor="middle" class="fig-value moss">PELT (early)</text>
+            <text x="192" y="196" text-anchor="middle" class="fig-value rust">KLIEP (accurate)</text>
+            <text x="292" y="196" text-anchor="middle" class="fig-value slate">CUSUM (late)</text>
+
+            <text x="190" y="212" text-anchor="middle" class="fig-axis-title">Time</text>
+          </svg>
+          <p class="fig-caption">Illustrative signal; measured accuracy on real data: KLIEP 0.77, CUSUM 0.13, PELT 0.23</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">Change-Point Detection</span>
+          <span class="chip">Density-Ratio Estimation</span>
+          <span class="chip">Time Series</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/change-point-detection-density-ratio" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Extremal Random Forests</h3>
+          <span class="card-tag">Statistical Learning with Extreme Values · MVA</span>
+        </div>
+        <p class="card-desc">
+          Reproduction and extension of the Extremal Random Forest method, implemented from
+          scratch and applied to income data from the UCI Adult Census dataset. ERF calibrates
+          far better than a plain quantile forest at extreme quantiles (calibration statistic
+          0.26 vs. 36.33 at the 0.99 quantile).
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematic of the Extremal Random Forests algorithm: a decision tree assigns a query point to a leaf, whose weighted exceedances fit a local generalized Pareto tail">
+            <text x="46" y="18" class="fig-title">How Extremal Random Forests works</text>
+
+            <path d="M160,34 L108,64" class="fig-line slate fig-draw" pathLength="1"/>
+            <path d="M160,34 L212,64" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.08s"/>
+            <path d="M108,64 L76,96" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.16s"/>
+            <path d="M108,64 L140,96" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.24s"/>
+            <path d="M212,64 L180,96" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.32s"/>
+            <path d="M212,64 L244,96" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.4s"/>
+
+            <circle cx="160" cy="34" r="4" class="fig-dot slate"/>
+            <circle cx="108" cy="64" r="3.4" class="fig-dot slate"/>
+            <circle cx="212" cy="64" r="3.4" class="fig-dot slate"/>
+            <circle cx="76" cy="96" r="3.2" class="fig-dot slate"/>
+            <circle cx="140" cy="96" r="4.6" class="fig-dot rust"/>
+            <circle cx="180" cy="96" r="3.2" class="fig-dot slate"/>
+            <circle cx="244" cy="96" r="3.2" class="fig-dot slate"/>
+
+            <text x="186" y="40" class="fig-label">random forest</text>
+            <text x="155" y="112" class="fig-label">leaf weights</text>
+
+            <path d="M140,101 L140,120" class="fig-axis fig-draw" pathLength="1" style="animation-delay:0.5s"/>
+            <path d="M136,116 L140,122 L144,116" fill="none" class="fig-axis fig-draw" pathLength="1" style="animation-delay:0.6s"/>
+
+            <line x1="75" y1="185" x2="205" y2="185" class="fig-axis"/>
+
+            <path d="M148,163 C158,173 180,183 205,185 L205,185 L148,185 Z" fill="var(--rust)" opacity="0.2" class="fig-fade" style="animation-delay:0.9s"/>
+            <path d="M78,183 C95,180 108,143 118,143 C128,143 140,155 148,163" class="fig-line slate fig-draw" pathLength="1" style="animation-delay:0.75s"/>
+            <path d="M148,163 C158,173 180,183 205,185" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.85s"/>
+
+            <text x="150" y="202" text-anchor="middle" class="fig-label">local GPD tail fit</text>
+          </svg>
+          <p class="fig-caption">A random forest gives leaf-based weights; the GPD is fit on weighted exceedances at each leaf to extrapolate extreme quantiles</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">Extreme Value Theory</span>
+          <span class="chip">Random Forests</span>
+          <span class="chip">Quantile Regression</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/extremal-random-forests" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2 class="section-title">Skills, Languages &amp; Interests</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>DL &amp; ML</h4>
+        <p>PyTorch, PyTorch Geometric, DGL, scikit-learn, XGBoost/LightGBM, NumPy, Pandas, GNNs,
+        Deep Learning, Variational Inference, Bayesian Optimization, Retrieval, Reranking, Text
+        Embeddings, LLM Fine-Tuning (LoRA)</p>
+      </div>
+      <div class="skill-group">
+        <h4>MLOps &amp; Deployment</h4>
+        <p>Docker, FastAPI, CI/CD (GitHub Actions), MLflow, pytest, Git, Cloud (GCP)</p>
+      </div>
+      <div class="skill-group">
+        <h4>Programming</h4>
+        <p>Python, C++, SQL</p>
+      </div>
+      <div class="skill-group">
+        <h4>Mathematics</h4>
+        <p>Convex Optimization, Bayesian Learning, Time Series, Information Theory, Possibility
+        Theory, MCMC, PAC-Bayes, Extreme Value Theory</p>
+      </div>
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>French (native), English (C1), Spanish (B1)</p>
+      </div>
+      <div class="skill-group">
+        <h4>Interests</h4>
+        <p>Muay Thai / Kickboxing, Running, Weightlifting, Nutrition, AI Tech Watch, Tech
+        Entrepreneurship, Reading, Travel</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Let's talk</h2>
+    <p class="contact-text">
+      Seeking a CIFRE PhD or an AI Engineering role in industry, startup or scale-up, based in
+      Paris. Available from October 2026.<br>Feel free to reach out:
+    </p>
+    <div class="contact-links">
+      <a href="mailto:gabrielmariadasspro@gmail.com">gabrielmariadasspro@gmail.com</a>
+      <a href="https://github.com/mariadass-gabriel" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/gabriel-mariadass" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Gabriel Mariadass · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

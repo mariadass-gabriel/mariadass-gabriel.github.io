@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>price-api demo · Gabriel Mariadass</title>
+<meta name="description" content="Interactive demo of price-api: estimate the shop price of a PC component, with a range that should contain the real price 9 times out of 10.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=15">
+</head>
+<body>
+
+<div class="grid-backdrop" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-mark">G.M.</a>
+  <div class="nav-links">
+    <a href="index.html#personal-projects">← Back to portfolio</a>
+  </div>
+</nav>
+
+<main id="top">
+  <section class="demo">
+    <p class="eyebrow">Live demo</p>
+    <h1 class="section-title">price-api: estimate the price of a PC component</h1>
+    <p class="demo-intro">
+      Describe a PC component and get an estimated shop price, along with a range that should
+      contain the real price 9 times out of 10.
+    </p>
+
+    <div class="demo-presets" role="group" aria-label="Fill the form with an example">
+      <span class="demo-presets-label">Try an example:</span>
+      <button type="button" class="btn-ghost" data-preset="gpu">Gaming graphics card</button>
+      <button type="button" class="btn-ghost" data-preset="ram">Gaming RAM kit</button>
+      <button type="button" class="btn-ghost" data-preset="ssd">Fast SSD</button>
+    </div>
+
+    <form id="demo-form" class="demo-form" novalidate>
+      <div class="field field-wide">
+        <label for="f-name">Product name</label>
+        <input id="f-name" name="name" type="text" maxlength="300" required
+               value="Asus Radeon RX 580 Dual OC 8GB GDDR5" autocomplete="off">
+        <p class="hint">As written on a shop page, including model and capacity.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-category">Type of component</label>
+        <select id="f-category" name="category" required>
+          <option value="Tarjetas graficas" selected>Graphics card</option>
+          <option value="Procesadores">Processor</option>
+          <option value="Placas Base">Motherboard</option>
+          <option value="Memoria RAM">RAM memory</option>
+          <option value="Discos Duros">Hard drive / SSD</option>
+          <option value="Fuentes Alimentacion">Power supply</option>
+          <option value="Torres">PC case</option>
+          <option value="Tarjetas de Sonido">Sound card</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="f-brand">Brand</label>
+        <input id="f-brand" name="brand" type="text" maxlength="100" required
+               value="Asus" list="brands" autocomplete="off">
+        <datalist id="brands">
+          <option value="Asus"></option><option value="Gigabyte"></option>
+          <option value="Corsair"></option><option value="Kingston"></option>
+          <option value="MSI"></option><option value="Western Digital"></option>
+          <option value="Thermaltake"></option><option value="G.Skill"></option>
+          <option value="Crucial"></option><option value="Seagate"></option>
+          <option value="Intel"></option><option value="AMD"></option>
+          <option value="Samsung"></option><option value="NZXT"></option>
+        </datalist>
+      </div>
+
+      <div class="field">
+        <label for="f-shop">Online shop</label>
+        <select id="f-shop" name="shop" required>
+          <option value="pccomponentes" selected>PcComponentes</option>
+          <option value="pcbox">PcBox</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="f-score">Customer rating</label>
+        <div class="input-unit">
+          <input id="f-score" name="score" type="number" min="0" max="10" step="0.1"
+                 inputmode="decimal" required value="8.6">
+          <span class="unit">/ 10</span>
+        </div>
+        <p class="hint">Enter 0 if the product has no rating yet.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-reviews">Number of reviews</label>
+        <div class="input-unit">
+          <input id="f-reviews" name="reviews" type="number" min="0" max="1000000" step="1"
+                 inputmode="numeric" required value="23">
+          <span class="unit">reviews</span>
+        </div>
+      </div>
+
+      <div class="field field-wide">
+        <button type="submit" id="submit" class="btn-primary">Estimate price</button>
+      </div>
+    </form>
+
+    <div id="status" class="demo-status" role="status" aria-live="polite" hidden></div>
+
+    <div id="result" class="card demo-result" aria-live="polite" hidden>
+      <p class="demo-price">Estimated price: <strong id="r-price"></strong></p>
+      <p class="demo-range">Likely range (90%): <strong id="r-range"></strong></p>
+      <p class="demo-explain">In 9 cases out of 10, the real price falls inside this range.</p>
+    </div>
+
+    <noscript><p class="hint">This demo needs JavaScript to contact the server.</p></noscript>
+
+    <p class="demo-note">
+      Indicative only: the model was trained on a 2020 snapshot of two online shops
+      (PcComponentes and PcBox), so today's prices may differ. Prices are in euros.
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Gabriel Mariadass · <a href="index.html#personal-projects">Back to portfolio</a></p>
+</footer>
+
+<script src="demo.js?v=1"></script>
+</body>
+</html>
