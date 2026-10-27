@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gabriel Mariadass · Portfolio</title>
-<meta name="description" content="Gabriel Mariadass · M.Sc. candidate in Mathematics, Vision, and Machine Learning (MVA), research in possibilistic variational inference and applied ML engineering.">
+<meta name="description" content="Gabriel Mariadass · ML/AI Engineer, M.Sc. in Mathematics, Vision, and Machine Learning (MVA), research in possibilistic variational inference and applied ML engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -35,10 +35,10 @@
     <div class="hero-text">
       <h1>Gabriel Mariadass</h1>
       <p class="hero-sub">
-        M.Sc. MVA at ENS Paris-Saclay and M.Eng. at École Nationale des Ponts et Chaussées,
-        combining applied ML engineering at Dassault Systèmes and Banque de France with research
-        in uncertainty-aware ML at NTU Singapore. Interested in a CIFRE PhD or an AI Engineering
-        role in industry, startup or scale-up. Available from October 2026.
+        M.Sc. MVA at ENS Paris-Saclay and M.Eng. at École Nationale des Ponts et Chaussées, with
+        applied ML experience at Dassault Systèmes and Banque de France and research in
+        uncertainty-aware ML at LPSM Paris and NTU Singapore. Seeking an ML/AI Engineering role in
+        Paris, and open to research-oriented positions such as a CIFRE PhD. Available immediately.
       </p>
       <div class="hero-cta">
         <a href="CV.pdf" class="btn-primary" target="_blank" rel="noopener">View CV ↗</a>
@@ -103,13 +103,13 @@
     <article class="card">
       <div class="card-head">
         <h3>Dassault Systèmes</h3>
-        <span class="card-tag">ML Engineer · Deep Learning &amp; GNN · 01/2025 - 07/2025</span>
+        <span class="card-tag">ML Engineer · GNN for Molecular Retrosynthesis · 01/2025 - 07/2025</span>
       </div>
       <p class="card-desc">
-        Molecular retrosynthesis via graph neural networks. Migrated the GNN retrosynthesis
-        pipeline from DGL to PyTorch Geometric, cutting CPU inference time by 38%, improved model
-        accuracy by up to 2 percentage points via Bayesian hyperparameter optimization, explored
-        quantization for further inference speedup, and refactored the preprocessing pipeline.
+        Migrated a GNN retrosynthesis pipeline from DGL to PyTorch Geometric, making inference up to
+        38% faster at comparable top-1 accuracy (66.5% → 66.1%). Evaluated Bayesian hyperparameter
+        optimization (+1.5 points top-1) and rejected it for a 2.8x larger model. Tested dynamic and
+        static quantization and refactored the codebase into a single configurable pipeline.
       </p>
       <div class="card-meta">
         <span class="chip">PyTorch Geometric</span>
@@ -126,9 +126,9 @@
       </div>
       <p class="card-desc">
         On-site credit institution control delegation for a live ECB-mandated audit of a major
-        French bank. Built neural network credit-scoring models with AUC 0.83 on 700K loan
-        contracts, raising Gini +0.14 vs. internal IRB models, and led PD/LGD/EAD risk-parameter
-        analysis and time-series studies for the audit.
+        French bank. Built neural-network challenger models on 700K loans, reaching AUC 0.84 and
+        +0.14 Gini over the bank's internal IRB models, and analyzed default-rate time series (PCA,
+        dynamic factor model) and PD margins of conservatism.
       </p>
       <div class="card-meta">
         <span class="chip">Machine Learning</span>
@@ -146,14 +146,15 @@
     <article class="card">
       <div class="card-head">
         <h3>Possibilistic Variational Inference</h3>
-        <span class="card-tag">ML Researcher · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
+        <span class="card-tag">ML Research Intern · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
       </div>
       <p class="card-desc">
-        Possibilistic variational inference research at LPSM and NTU. Reproduced reference
-        LeNet-5/Fashion-MNIST results as a baseline, diagnosed candidate misspecification across
-        four posterior landscapes, developed learned precision structures improving accuracy,
-        NLL, and calibration, and extended a SAM connection into an adaptive, learned
-        perturbation radius.
+        Possibilistic variational inference research at LPSM and NTU. Reproduced uCBOpt, a published
+        uncertainty-aware optimizer, and extended it with learned precision, benchmarked against
+        IVON and AdamW on LeNet-5 and Fashion-MNIST. Improved NLL and ECE (0.025 → 0.014-0.022) over
+        uCBOpt, and beat 64-sample IVON on ECE (0.014 vs 0.019) with a single pass. Extended an
+        existing SAM connection with an adaptive, learned perturbation radius, and documented the
+        numerical limits of learned precision at network scale.
       </p>
       <div class="card-meta">
         <span class="chip">Variational Inference</span>
@@ -493,22 +494,22 @@
     <div class="skills-grid">
       <div class="skill-group">
         <h4>Programming</h4>
-        <p>Python, C++, SQL</p>
+        <p>Python, SQL, Bash</p>
       </div>
       <div class="skill-group">
-        <h4>DL &amp; ML</h4>
-        <p>PyTorch, PyTorch Geometric, DGL, scikit-learn, XGBoost/LightGBM, NumPy, Pandas, GNNs,
-        Deep Learning, Variational Inference, Bayesian Optimization, Retrieval, Reranking, Text
-        Embeddings, LLM Fine-Tuning (LoRA)</p>
+        <h4>ML Engineering (see price-api)</h4>
+        <p>Docker, FastAPI, CI/CD (GitHub Actions), Cloud (GCP), MLflow, pytest, Git</p>
       </div>
       <div class="skill-group">
-        <h4>MLOps &amp; Deployment</h4>
-        <p>Docker, FastAPI, CI/CD (GitHub Actions), MLflow, pytest, Git, Cloud (GCP)</p>
+        <h4>ML &amp; Deep Learning</h4>
+        <p>PyTorch, scikit-learn, XGBoost/LightGBM, NumPy, Pandas, tabular modeling, time-series
+        forecasting, Transformers/LLMs, RAG, LoRA fine-tuning, GNNs (PyG, DGL),
+        calibration/conformal prediction, Optuna, quantization</p>
       </div>
       <div class="skill-group">
         <h4>Mathematics</h4>
-        <p>Convex Optimization, Bayesian Learning, Time Series, Information Theory, Possibility
-        Theory, MCMC, PAC-Bayes, Extreme Value Theory</p>
+        <p>Probability &amp; Statistics, Bayesian Learning, Convex Optimization, Possibility
+        Theory, Extreme Values</p>
       </div>
       <div class="skill-group">
         <h4>Languages</h4>
@@ -516,8 +517,8 @@
       </div>
       <div class="skill-group">
         <h4>Interests</h4>
-        <p>Muay Thai / Kickboxing, Running, Weightlifting, Nutrition, AI Tech Watch, Tech
-        Entrepreneurship, Reading, Travel</p>
+        <p>Muay Thai, Running, Weightlifting, Nutrition, AI Tech Watch, Tech Entrepreneurship,
+        Reading, Travel</p>
       </div>
     </div>
   </section>
@@ -526,8 +527,8 @@
   <section id="contact" class="contact">
     <h2 class="section-title">Let's talk</h2>
     <p class="contact-text">
-      Seeking a CIFRE PhD or an AI Engineering role in industry, startup or scale-up, based in
-      Paris. Available from October 2026.<br>Feel free to reach out:
+      Seeking an ML/AI Engineering role in Paris, and open to research-oriented positions such as
+      a CIFRE PhD. Available immediately.<br>Feel free to reach out:
     </p>
     <div class="contact-links">
       <a href="mailto:gabrielmariadasspro@gmail.com">gabrielmariadasspro@gmail.com</a>
