@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -149,19 +149,38 @@
         <span class="card-tag">ML Research Intern · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
       </div>
       <p class="card-desc">
-        Possibilistic variational inference research at LPSM and NTU. Reproduced uCBOpt, a published
-        uncertainty-aware optimizer, and extended it with learned precision, benchmarked against
-        IVON and AdamW on LeNet-5 and Fashion-MNIST. Improved NLL and ECE (0.025 → 0.014-0.022) over
-        uCBOpt, and beat 64-sample IVON on ECE (0.014 vs 0.019) with a single pass. Extended an
-        existing SAM connection with an adaptive, learned perturbation radius, and documented the
-        numerical limits of learned precision at network scale.
+        Possibilistic variational inference research, extending the maxitive Donsker–Varadhan
+        framework (Singh et al., 2025). Extended uCBOpt with learned precision, enabling an adaptive
+        SAM radius and cutting calibration error (ECE 0.025 → 0.014) &amp; NLL (0.272 → 0.252),
+        beating 64-sample IVON on ECE (0.019 → 0.014) in 1 pass. Documented limits at network scale.
+      </p>
+      <p class="card-desc">
+        Supervised by Badr-Eddine Chérief-Abdellatif and Jérémie Houssineau, at LPSM then NTU.
       </p>
       <div class="card-meta">
         <span class="chip">Variational Inference</span>
         <span class="chip">Possibility Theory</span>
         <span class="chip">Sharpness-Aware Minimization</span>
       </div>
-      <p class="card-note">Code not yet public, pending potential publication.</p>
+      <ul class="card-resources">
+        <li>
+          <a href="research-report.pdf" class="card-link" target="_blank" rel="noopener">Report ↗</a>
+          <a href="research-slides.pdf" class="card-link" target="_blank" rel="noopener">Slides ↗</a>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_reprod" class="card-link" target="_blank" rel="noopener">MDV_reprod ↗</a>
+          <span>Section 4. Reproduction of uCBOpt at fixed precision.</span>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_lands" class="card-link" target="_blank" rel="noopener">MDV_lands ↗</a>
+          <span>Section 5. Tractable posteriors used to diagnose candidate misspecification.</span>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_spread" class="card-link" target="_blank" rel="noopener">MDV_spread ↗</a>
+          <span>Section 7. Learned precision and its link to SAM, validated on LeNet-5 / Fashion-MNIST.</span>
+        </li>
+      </ul>
+      <p class="card-note">Each repository contains the code and logs behind every number reported in the report.</p>
     </article>
   </section>
 
