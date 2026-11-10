@@ -20,8 +20,8 @@
     <a href="#about">Background</a>
     <a href="#personal-projects">Personal</a>
     <a href="#experience">Experience</a>
-    <a href="#research">Research</a>
     <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
     <a href="CV.pdf" target="_blank" rel="noopener">CV</a>
@@ -159,51 +159,6 @@
     </article>
   </section>
 
-  <!-- RESEARCH -->
-  <section id="research" class="work">
-    <h2 class="section-title">Research</h2>
-
-    <article class="card">
-      <div class="card-head">
-        <h3>Possibilistic Variational Inference</h3>
-        <span class="card-tag">ML Research Intern · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
-      </div>
-      <p class="card-desc">
-        Possibilistic variational inference research, extending the maxitive Donsker-Varadhan
-        framework (Singh et al., 2026). Reproduced and extended uCBOpt with learned precision and an
-        adaptive SAM radius. Improved ECE (0.025 → 0.014) and NLL (0.272 → 0.252) vs uCBOpt, beat
-        64-sample IVON on ECE (0.019 → 0.014) in 1 pass. Documented limits at network scale.
-      </p>
-      <p class="card-desc">
-        Supervised by Badr-Eddine Chérief-Abdellatif and Jérémie Houssineau, at LPSM then NTU.
-      </p>
-      <div class="card-meta">
-        <span class="chip">Variational Inference</span>
-        <span class="chip">Possibility Theory</span>
-        <span class="chip">Sharpness-Aware Minimization</span>
-      </div>
-      <ul class="card-resources">
-        <li>
-          <a href="research-report.pdf" class="card-link" target="_blank" rel="noopener">Report ↗</a>
-          <a href="research-slides.pdf" class="card-link" target="_blank" rel="noopener">Slides ↗</a>
-        </li>
-        <li>
-          <a href="https://github.com/mariadass-gabriel/MDV_reprod" class="card-link" target="_blank" rel="noopener">MDV_reprod ↗</a>
-          <span>Section 4. Reproduction of uCBOpt at fixed precision.</span>
-        </li>
-        <li>
-          <a href="https://github.com/mariadass-gabriel/MDV_lands" class="card-link" target="_blank" rel="noopener">MDV_lands ↗</a>
-          <span>Section 5. Tractable posteriors used to diagnose candidate misspecification.</span>
-        </li>
-        <li>
-          <a href="https://github.com/mariadass-gabriel/MDV_spread" class="card-link" target="_blank" rel="noopener">MDV_spread ↗</a>
-          <span>Section 7. Learned precision and its link to SAM, validated on LeNet-5 / Fashion-MNIST.</span>
-        </li>
-      </ul>
-      <p class="card-note">Each repository contains the code and logs behind every number reported in the report.</p>
-    </article>
-  </section>
-
   <!-- PROJECTS -->
   <section id="projects" class="work">
     <h2 class="section-title">Academic Projects</h2>
@@ -303,54 +258,6 @@
 
       <article class="card">
         <div class="card-head">
-          <h3>Variational Approximations of Gibbs Posteriors</h3>
-          <span class="card-tag">Bayesian Machine Learning · MVA</span>
-        </div>
-        <p class="card-desc">
-          Reproduction and extension of Alquier, Ridgway &amp; Chopin's PAC-Bayesian analysis
-          of variational approximations to the Gibbs posterior, comparing two variational
-          families against a reference SMC sampler on real classification datasets (breast
-          cancer, Pima diabetes). The variational approximations match SMC test accuracy while
-          running about twice as fast at high temperature.
-        </p>
-        <div class="card-figure">
-          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of computation time versus lambda: SMC rises steeply while the F2 mean-field and F3 low-rank variational families each stay flat">
-            <text x="46" y="18" class="fig-title">Runtime vs. temperature (lambda)</text>
-
-            <line x1="46" y1="116" x2="280" y2="116" class="fig-grid"/>
-            <line x1="46" y1="72" x2="280" y2="72" class="fig-grid"/>
-            <text x="42" y="119" text-anchor="end" class="fig-label">4s</text>
-            <text x="42" y="75" text-anchor="end" class="fig-label">8s</text>
-
-            <line x1="46" y1="28" x2="46" y2="160" class="fig-axis"/>
-            <line x1="46" y1="160" x2="280" y2="160" class="fig-axis"/>
-
-            <path d="M54,116 L272,116" class="fig-line slate fig-draw" pathLength="1"/>
-            <path d="M54,105 L272,105" class="fig-line slate fig-dash fig-fade"/>
-            <path d="M54,151.75 L90.3,138 L126.7,116 L163,94 L199.3,72 L235.7,55.5 L272,33.5" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.25s"/>
-
-            <text x="277" y="30" class="fig-value rust">SMC</text>
-            <text x="277" y="102" class="fig-value slate">F3</text>
-            <text x="277" y="120" class="fig-value slate">F2</text>
-
-            <text x="54" y="176" text-anchor="middle" class="fig-label">1</text>
-            <text x="163" y="176" text-anchor="middle" class="fig-label">20</text>
-            <text x="272" y="176" text-anchor="middle" class="fig-label">100</text>
-            <text x="163" y="196" text-anchor="middle" class="fig-axis-title">lambda</text>
-            <text x="14" y="94" text-anchor="middle" class="fig-axis-title" transform="rotate(-90 14 94)">Time (s)</text>
-          </svg>
-          <p class="fig-caption">Reported endpoints: SMC 0.75s to 11.5s; F2 (mean-field) ~4s and F3 (low-rank) ~5s, both flat</p>
-        </div>
-        <div class="card-meta">
-          <span class="chip">PAC-Bayes</span>
-          <span class="chip">Variational Inference</span>
-          <span class="chip">SMC</span>
-        </div>
-        <a href="https://github.com/mariadass-gabriel/variational-gibbs-posteriors" class="card-link" target="_blank" rel="noopener">View code ↗</a>
-      </article>
-
-      <article class="card">
-        <div class="card-head">
           <h3>Adaptive MALA with Truncated Drift</h3>
           <span class="card-tag">Computational Statistics · MVA</span>
         </div>
@@ -417,6 +324,54 @@
           <span class="chip">Adaptive Sampling</span>
         </div>
         <a href="https://github.com/mariadass-gabriel/adaptive-mala-truncated-drift" class="card-link" target="_blank" rel="noopener">View code ↗</a>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3>Variational Approximations of Gibbs Posteriors</h3>
+          <span class="card-tag">Bayesian Machine Learning · MVA</span>
+        </div>
+        <p class="card-desc">
+          Reproduction and extension of Alquier, Ridgway &amp; Chopin's PAC-Bayesian analysis
+          of variational approximations to the Gibbs posterior, comparing two variational
+          families against a reference SMC sampler on real classification datasets (breast
+          cancer, Pima diabetes). The variational approximations match SMC test accuracy while
+          running about twice as fast at high temperature.
+        </p>
+        <div class="card-figure">
+          <svg class="fig-plot" viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of computation time versus lambda: SMC rises steeply while the F2 mean-field and F3 low-rank variational families each stay flat">
+            <text x="46" y="18" class="fig-title">Runtime vs. temperature (lambda)</text>
+
+            <line x1="46" y1="116" x2="280" y2="116" class="fig-grid"/>
+            <line x1="46" y1="72" x2="280" y2="72" class="fig-grid"/>
+            <text x="42" y="119" text-anchor="end" class="fig-label">4s</text>
+            <text x="42" y="75" text-anchor="end" class="fig-label">8s</text>
+
+            <line x1="46" y1="28" x2="46" y2="160" class="fig-axis"/>
+            <line x1="46" y1="160" x2="280" y2="160" class="fig-axis"/>
+
+            <path d="M54,116 L272,116" class="fig-line slate fig-draw" pathLength="1"/>
+            <path d="M54,105 L272,105" class="fig-line slate fig-dash fig-fade"/>
+            <path d="M54,151.75 L90.3,138 L126.7,116 L163,94 L199.3,72 L235.7,55.5 L272,33.5" class="fig-line rust fig-draw" pathLength="1" style="animation-delay:0.25s"/>
+
+            <text x="277" y="30" class="fig-value rust">SMC</text>
+            <text x="277" y="102" class="fig-value slate">F3</text>
+            <text x="277" y="120" class="fig-value slate">F2</text>
+
+            <text x="54" y="176" text-anchor="middle" class="fig-label">1</text>
+            <text x="163" y="176" text-anchor="middle" class="fig-label">20</text>
+            <text x="272" y="176" text-anchor="middle" class="fig-label">100</text>
+            <text x="163" y="196" text-anchor="middle" class="fig-axis-title">lambda</text>
+            <text x="14" y="94" text-anchor="middle" class="fig-axis-title" transform="rotate(-90 14 94)">Time (s)</text>
+          </svg>
+          <p class="fig-caption">Reported endpoints: SMC 0.75s to 11.5s; F2 (mean-field) ~4s and F3 (low-rank) ~5s, both flat</p>
+        </div>
+        <div class="card-meta">
+          <span class="chip">PAC-Bayes</span>
+          <span class="chip">Variational Inference</span>
+          <span class="chip">SMC</span>
+        </div>
+        <a href="https://github.com/mariadass-gabriel/variational-gibbs-posteriors" class="card-link" target="_blank" rel="noopener">View code ↗</a>
       </article>
     </div>
 
@@ -525,6 +480,51 @@
         <a href="https://github.com/mariadass-gabriel/extremal-random-forests" class="card-link" target="_blank" rel="noopener">View code ↗</a>
       </article>
     </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="work">
+    <h2 class="section-title">Research</h2>
+
+    <article class="card">
+      <div class="card-head">
+        <h3>Possibilistic Variational Inference</h3>
+        <span class="card-tag">ML Research Intern · LPSM, France &amp; NTU, Singapore · 04/2026 - 08/2026</span>
+      </div>
+      <p class="card-desc">
+        Possibilistic variational inference research, extending the maxitive Donsker-Varadhan
+        framework (Singh et al., 2026). Reproduced and extended uCBOpt with learned precision and an
+        adaptive SAM radius. Improved ECE (0.025 → 0.014) and NLL (0.272 → 0.252) vs uCBOpt, beat
+        64-sample IVON on ECE (0.019 → 0.014) in 1 pass. Documented limits at network scale.
+      </p>
+      <p class="card-desc">
+        Supervised by Badr-Eddine Chérief-Abdellatif and Jérémie Houssineau, at LPSM then NTU.
+      </p>
+      <div class="card-meta">
+        <span class="chip">Variational Inference</span>
+        <span class="chip">Possibility Theory</span>
+        <span class="chip">Sharpness-Aware Minimization</span>
+      </div>
+      <ul class="card-resources">
+        <li>
+          <a href="research-report.pdf" class="card-link" target="_blank" rel="noopener">Report ↗</a>
+          <a href="research-slides.pdf" class="card-link" target="_blank" rel="noopener">Slides ↗</a>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_reprod" class="card-link" target="_blank" rel="noopener">MDV_reprod ↗</a>
+          <span>Section 4. Reproduction of uCBOpt at fixed precision.</span>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_lands" class="card-link" target="_blank" rel="noopener">MDV_lands ↗</a>
+          <span>Section 5. Tractable posteriors used to diagnose candidate misspecification.</span>
+        </li>
+        <li>
+          <a href="https://github.com/mariadass-gabriel/MDV_spread" class="card-link" target="_blank" rel="noopener">MDV_spread ↗</a>
+          <span>Section 7. Learned precision and its link to SAM, validated on LeNet-5 / Fashion-MNIST.</span>
+        </li>
+      </ul>
+      <p class="card-note">Each repository contains the code and logs behind every number reported in the report.</p>
+    </article>
   </section>
 
   <!-- SKILLS -->
